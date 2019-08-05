@@ -1,0 +1,135 @@
+<!--
+<form class="form-horizontal" [formGroup]="employeeForm2"  ></form>
+
+<div class="form-group">
+
+  <label class="col-sm-2 control-label" for="select">Preffered Search</label>
+  <div class="col-sm-8">
+  <select id="search"  formControlName="select" 
+          class="form-control" >
+          <option *ngFor="let sr of searches" [value]="sr.name">
+              {{sr.name}}
+
+    </option>
+  </select>
+</div>
+</div>
+-->
+
+
+
+<form  class="form-horizontal" [formGroup]="employeeForm2"  >
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">{{pageTitle}}</h3>
+      </div>
+      <div class="panel-body">
+          <div class="form-group"
+          >
+      <label class="col-sm-2 control-label" for="select">search</label>
+      <div class="col-sm-8">
+          <select id="search"  formControlName="select" (change)="selectName();"
+                  class="form-control"    >
+                  <option *ngFor="let sr of searches" [value]="sr.name">
+                      {{sr.name}}
+        
+            </option>
+          </select>
+          </div>
+
+          <div class="btn-toolbar">
+            <button class="btn btn-primary"  (click)="clicked()" >Submit</button>
+             {{buttonName}} 
+            </div>
+         
+
+</div>
+
+        </div>
+   
+
+       
+
+
+        <div class="table-responsive">
+
+
+
+
+            <input type="text" class="form-control" placeholder="Search By Name"
+            style="width:300px" [(ngModel)]="searchTerm" [ngModelOptions]="{standalone: true}" />
+        
+            <input type="text" class="form-control" placeholder="Search By address"
+            style="width:300px" [(ngModel)]="searchTerm1" [ngModelOptions]="{standalone: true}" />
+            <button (click)="changeState()">GET MATCH</button>
+            
+            <ng-container *ngIf="show">
+
+
+        
+        <br>
+          <table  class="table table-bordered"  *ngIf="employees && employees.length " >
+        
+              <thead>
+        
+                <tr class="bg-primary">
+        
+                  <th> Name</th>
+        
+                <th> dateOfBirth</th> 
+        
+                  <th>Email</th>
+        
+                  <th>Phone</th>
+        
+                  <th>Contact Preference</th>
+                   
+                  <th>Current Address </th>
+        
+                  <th>  Location </th>
+        
+                 
+                 
+                  <!-- <th>Resume</th> -->
+                  <!-- <th>Action</th> -->
+        
+                </tr>
+        
+              </thead>
+        
+              <tbody>
+               
+
+                <tr *ngFor="let employee of employees | employeeFilter  :searchTerm :searchTerm1 "   >
+        
+                  <ng-container *ngIf="isAllowed(employee.Optional)"> 
+
+                  <td>{{ employee.fullName }} </td>
+                  
+                  <td>{{ employee.dateOfBirth }}</td>
+        
+                  <td>{{ employee.email }}</td>
+         
+                  <td>{{ employee.phone }}</td>
+        
+                  <td>{{ employee.contactPreference }}</td>
+                  <td>{{ employee.address }}</td>
+        
+                  <td>{{ employee.location }}</td> 
+                <!-- //  <td>  {{ employee.photoPath }}</td> -->
+        
+                
+                  <!-- <td> <button class="btn btn-primary" (click)="editButtonClick(employee.id)">Edit</button> </td> -->
+        </ng-container> 
+                </tr>
+        
+              </tbody>
+         
+            </table>
+
+
+
+        </ng-container>
+          </div>
+      
+ 

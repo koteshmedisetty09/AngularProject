@@ -1,0 +1,95 @@
+
+<!--   for searching   -->
+<!-- <div class="form-group">
+    <input type="text" class="form-control" placeholder="Search By Name"
+            style="width:300px" [(ngModel)]="searchTerm" />
+</div> -->
+<!--   ends heere   -->
+
+  
+
+
+
+
+<div class="table-responsive">
+
+    <input type="text" class="form-control" placeholder="Search By Name"
+    style="width:300px" [(ngModel)]="searchTerm" />
+
+    <input type="text" class="form-control" placeholder="Search By address"
+    style="width:300px" [(ngModel)]="searchTerm1" />
+   
+    <!-- <input type="text" class="form-control" placeholder="Search By city"
+    style="width:300px" [(ngModel)]="searchTerm.location" />
+<input type="checkbox" ng-model="exactMatch"/>ExactMatch -->
+
+
+<br>
+    <table matSort (matSortChange)="sortData($event)" class="table table-bordered"  *ngIf="employees && employees.length " >
+
+      <thead>
+
+        <tr class="bg-primary">
+
+          <th mat-sort-header="fullName"> Name</th>
+
+        <th> dateOfBirth</th> 
+
+          <th>Email</th>
+
+          <th>Phone</th>
+
+          <th>Contact Preference</th>
+
+
+           <th>DEPARTMENT </th>
+
+          <th mat-sort-header="address">Current Address </th>
+
+
+          <th>  Location </th>
+
+         
+         
+          <th>Resume</th>
+          <!-- <th>Action</th> -->
+
+        </tr>
+
+      </thead>
+
+      <tbody>
+
+        <tr *ngFor="let employee of employees | employeeFilter:searchTerm :searchTerm1 "   (click)="editButtonClick(employee.id)">
+
+          <td>{{ employee.fullName }}</td>
+          
+          <td>{{ employee.dateOfBirth }}</td>
+
+          <td>{{ employee.email }}</td>
+ 
+          <td>{{ employee.phone }}</td>
+
+          <td>{{ employee.contactPreference }}</td>
+  
+          <td>{{ employee.department }}</td>
+
+         
+          <td>{{ employee.address }}</td>
+
+          <td>{{ employee.location }}</td> 
+
+          <td> <img class="imageClass" [src]="employee.photoPath"  /> </td>
+
+        
+          <!-- <td> <button class="btn btn-primary" (click)="editButtonClick(employee.id)">Edit</button> </td> -->
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+ 

@@ -1,0 +1,56 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "typeRoots": [
+      "node_modules/@types"
+    ],     
+    "lib": [
+      "es2018",
+      "dom"
+    ], 
+ 
+
+    "paths": {
+      
+     // "jszip": [
+      //  "node_modules/jszip/dist/jszip.min.js"
+     // ],
+
+
+      "globalize": [
+        "./node_modules/globalize/dist/globalize"
+      ],
+      "globalize/*": [
+        "./node_modules/globalize/dist/globalize/*"
+      ],
+    "cldrjs": [
+        "./node_modules/cldrjs/dist/cldr"
+      ],
+      "cldrjs/*": [
+        "./node_modules/cldrjs/dist/cldr/*"
+     ],
+      "jszip": [
+        "./node_modules/jszip/dist/jszip.min.js"
+      ]
+
+
+    }
+
+
+
+
+
+
+
+  }
+}

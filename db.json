@@ -1,0 +1,122 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "fullName": "kotesh",
+      "dateOfBirth": "1996-08-27",
+      "contactPreference": "email",
+      "email": "kotesh2796@dell.com",
+      "phone": "8008505009",
+      "departmentID": "1",
+      "address": "YANAM",
+      "location": "HYD",
+      "skills": [
+        {
+          "skillName": "java",
+          "experienceInYears": "1",
+          "proficiency": "beginner"
+        }
+      ],
+      "photoPath": "assets/images/smith.jpg"
+    },
+    {
+      "id": 2,
+      "fullName": "rajat",
+      "dateOfBirth": "1998-03-12",
+      "contactPreference": "email",
+      "email": "rajat234@dell.com",
+      "phone": "7731645390",
+      "departmentID": "2",
+      "address": "NAGPUR",
+      "location": "BNG",
+      "skills": [
+        {
+          "skillName": "java",
+          "experienceInYears": "3",
+          "proficiency": "intermediate"
+        }
+      ],
+      "photoPath": "assets/images/john.jpg"
+    },
+    {
+      "id": 3,
+      "fullName": "sudanshu",
+      "dateOfBirth": "1996-03-07",
+      "contactPreference": "email",
+      "email": "sud556@dell.com",
+      "phone": "9000456912",
+      "departmentID": "3",
+      "address": "GUNTUR",
+      "location": "CHN",
+      "skills": [
+        {
+          "skillName": "Angular",
+          "experienceInYears": "1",
+          "proficiency": "beginner"
+        }
+      ],
+      "photoPath": "assets/images/prasad.jpg"
+    },
+    {
+      "id": 4,
+      "fullName": "kotesh",
+      "dateOfBirth": "1996-02-09",
+      "contactPreference": "email",
+      "email": "kotesh996@dell.com",
+      "phone": "7731845801",
+      "departmentID": "4",
+      "address": "KOCHI",
+      "location": "RJY",
+      "skills": [
+        {
+          "skillName": "java",
+          "experienceInYears": "4",
+          "proficiency": "intermediate"
+        }
+      ],
+      "photoPath": "assets/images/sample.jpg"
+    },
+    {
+      "id": 5,
+      "fullName": "kotesh",
+      "dateOfBirth": "2019-08-01",
+      "contactPreference": "email",
+      "email": "sivqa@dell.com",
+      "phone": "1234567890",
+      "departmentID": "2",
+      "address": "INJARAM",
+      "location": "CHN",
+      "skills": [
+        {
+          "skillName": "java",
+          "experienceInYears": "1",
+          "proficiency": "beginner"
+        }
+      ],
+      "photoPath": "assets/images/prasad.jpg"
+    }
+  ],
+  "departments": [
+    {
+      "id": "1",
+    
+      "name": "Help Desk",
+      "strength": "300"
+    },
+    {
+      "id": "2",
+      "name": "HR",
+      "strength": "500"
+    },
+    {
+      "id": "3",
+      "name": "IT",
+      "strength": "100"
+    },
+    { 
+      "id": "4",
+      "name": "Payroll",
+      "strength": "800"
+    }
+  ]
+}
